@@ -1,0 +1,247 @@
+/*-------------------------------------
+  Global stylesheet
+-------------------------------------*/
+/*-------------------------------------
+  Example stylesheet
+-------------------------------------*/
+.first-block {
+  height: auto;
+  margin: 20px 20px 0; }
+  .first-block .uk-grid {
+    margin-left: 0; }
+    .first-block .uk-grid .uk-first-column {
+      padding-left: 0 !important; }
+    .first-block .uk-grid .uk-width-1-3 {
+      margin-right: 20px; }
+    .first-block .uk-grid .uk-card-default {
+      border-top: 10px solid #1e87f0;
+      margin: 10px 20px; }
+      .first-block .uk-grid .uk-card-default .uk-column-1-1 {
+        padding-left: 0; }
+        .first-block .uk-grid .uk-card-default .uk-column-1-1 .uk-grid {
+          padding-left: 0; }
+          .first-block .uk-grid .uk-card-default .uk-column-1-1 .uk-grid label {
+            padding-left: 0; }
+          .first-block .uk-grid .uk-card-default .uk-column-1-1 .uk-grid .uk-badge {
+            margin-left: 10px; }
+        .first-block .uk-grid .uk-card-default .uk-column-1-1 .uk-icon-button {
+          margin-left: 15px;
+          width: 36px;
+          padding-left: 0; }
+        .first-block .uk-grid .uk-card-default .uk-column-1-1 .bold-text {
+          font-weight: bold; }
+        .first-block .uk-grid .uk-card-default .uk-column-1-1 p {
+          padding-left: 0; }
+    .first-block .uk-grid .name-of-groups {
+      padding-left: 20px;
+      height: 50px;
+      background-color: #6A9FD5; }
+    .first-block .uk-grid .uk-width-2-3 {
+      padding-left: 20px; }
+      .first-block .uk-grid .uk-width-2-3 form {
+        padding-left: 20px; }
+
+/*-------------------------------------
+  Example stylesheet
+-------------------------------------*/
+.container {
+  padding: 20px 0 10px;
+  height: auto; }
+
+.uk-table-hover > tr:hover,
+.uk-table-hover tbody tr:hover {
+  background: #c2e8fb; }
+
+p {
+  display: block;
+  color: black;
+  font-size: 13px; }
+
+h1 {
+  text-align: left;
+  color: black; }
+
+.background-color-of-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0;
+  height: 45px;
+  width: 45px;
+  background-color: black;
+  color: white; }
+  .background-color-of-icon .uk-icon {
+    color: white; }
+
+.flex-containter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 40px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .flex-containter h1 {
+    padding-left: 20px;
+    margin: 0; }
+
+.uk-width-expand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 0; }
+
+.uk-modal-dialog {
+  width: 900px; }
+  .uk-modal-dialog .uk-modal-title {
+    font-size: 1.5rem; }
+  .uk-modal-dialog .uk-form-label {
+    width: 150px; }
+  .uk-modal-dialog .uk-grid-stack {
+    margin-top: 0; }
+    .uk-modal-dialog .uk-grid-stack .uk-first-column {
+      width: 100%; }
+
+.back-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  color: white;
+  -webkit-transition: opacity 0.2s ease, visibility 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, background 0.2s ease; }
+  .back-to-top .uk-icon-button {
+    background-color: #ffffff;
+    border: 1px solid #a5a5a5;
+    cursor: pointer; }
+
+.btn-green {
+  background-color: #32d296; }
+
+.btn-red {
+  background-color: #f0506e; }
+
+.white-icon {
+  color: white; }
+
+.uk-input:focus {
+  border-color: #39f;
+  caret-color: black;
+  color: black; }
+
+.uk-badge {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+textarea {
+  height: 120px !important;
+  resize: none;
+  line-height: 22px !important; }
+
+.hidden {
+  display: none !important; }
+
+.eye-icon-container {
+  font-size: 18px;
+  cursor: pointer;
+  display: block; }
+
+.disabled-icon {
+  color: #dddddd; }
+
+.basic-info-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 32px; }
+
+/*-------------------------------------
+  Example stylesheet
+-------------------------------------*/
+.adress-block,
+.comment-block,
+.history-block {
+  height: auto;
+  margin: 10px 20px; }
+  .adress-block .uk-grid,
+  .comment-block .uk-grid,
+  .history-block .uk-grid {
+    margin-left: 0;
+    padding-left: 0; }
+    .adress-block .uk-grid .uk-first-column,
+    .comment-block .uk-grid .uk-first-column,
+    .history-block .uk-grid .uk-first-column {
+      padding-left: 40px; }
+    .adress-block .uk-grid .uk-card-default,
+    .comment-block .uk-grid .uk-card-default,
+    .history-block .uk-grid .uk-card-default {
+      border-top: 10px solid #1e87f0;
+      margin: 10px 20px;
+      padding-left: 40px; }
+      .adress-block .uk-grid .uk-card-default .uk-grid .uk-first-column,
+      .comment-block .uk-grid .uk-card-default .uk-grid .uk-first-column,
+      .history-block .uk-grid .uk-card-default .uk-grid .uk-first-column {
+        padding-left: 0; }
+
+/*-------------------------------------
+  Example stylesheet
+-------------------------------------*/
+.contact-name {
+  display: block;
+  height: 120px;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08); }
+  .contact-name .uk-breadcrumb {
+    padding-left: 40px;
+    height: 30px; }
+  .contact-name .uk-grid {
+    margin-top: 10px; }
+    .contact-name .uk-grid .uk-width-expand {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      padding-right: 40px; }

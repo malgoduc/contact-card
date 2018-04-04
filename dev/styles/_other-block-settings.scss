@@ -1,0 +1,30 @@
+/*-------------------------------------
+  Example stylesheet
+-------------------------------------*/
+.adress-block,
+.comment-block,
+.history-block {
+	height: auto;
+	margin: 10px 20px;
+
+	.uk-grid {
+		margin-left: 0;
+		padding-left: 0;
+
+		.uk-first-column {
+			padding-left: 40px;
+		}
+
+		.uk-card-default {
+			border-top: 10px solid #1e87f0;
+			margin: 10px 20px;
+			padding-left: 40px;
+
+			.uk-grid {
+				.uk-first-column {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

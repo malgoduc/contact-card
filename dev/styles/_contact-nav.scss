@@ -1,0 +1,25 @@
+/*-------------------------------------
+  Example stylesheet
+-------------------------------------*/
+.contact-name {
+	display: block;
+	height: 120px;
+	background-color: white;
+	box-shadow: 0 10px 15px rgba(0,0,0,.08);
+
+	.uk-breadcrumb {
+		padding-left: 40px;
+		height: 30px;
+	}
+
+	.uk-grid {
+		margin-top: 10px;
+
+		.uk-width-expand {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			padding-right: 40px;
+		}
+	}
+}

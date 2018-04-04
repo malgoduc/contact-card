@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Karta kontaktu</title>
+	<!-- normalize.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="contact-name">
+			<div uk-grid>
+				<div class="uk-width-auto">
+					<ul class="uk-breadcrumb">
+						<li><a href=""></a>Klienci</li>
+						<li><a href=""></a>Lista Klientów</li>
+						<li><span>Edycja użytkownika</span></li>
+					</ul>
+				</div>
+			</div>
+			<div uk-grid>
+				<!--Nazwa kontaktu, która będzie zcztywała dane z pola Imię i Naziwko / Firma - będzie zmiana ikony ze względu na osobę/firmę -->
+				<div class="uk-width-1-2 flex-containter">
+					<div class="background-color-of-icon">
+						<span id="icon-private-client" class="hidden" uk-icon="icon: user; ratio:2"></span>
+						<i id="icon-company-client" class="fa fa-industry fa-2x hidden" aria-hidden="true"></i>
+					</div>
+					<div>
+						<h1>Jan Kowalski</h1></div>
+				</div>
+				<div class="uk-width-expand">
+					<button class="uk-button uk-button-danger">USUŃ UŻYTKOWNIKA</button>
+				</div>
+			</div>
+		</div>
+		<!--Pierwsza kolumna z danymi-podział na nieregularne kolumny i wiersze z edycją danych i grupami rabatowymi  -->
+		<div class="first-block">
+			<div uk-grid>
+				<div class="uk-flex uk-flex-column uk-width-1-3@m">
+					<div class="uk-card uk-card-default uk-card-body">
+						<!--PODSTAWOWE INFORMAJCE  -->
+						<h3 class="uk-card-title">Informacje</h3>
+						<div class="uk-column-1-1">
+							<div class="uk-grid-small uk-child-width-1-2 uk-grid basic-info-row">
+								<p>ID</p>
+								<div class="bold-text">
+									<p>3489</p>
+								</div>
+							</div>
+							<div class="uk-grid-small uk-child-width-1-2 uk-grid basic-info-row">
+								<p>Data rejestracji</p>
+								<div class="bold-text">
+									<p>2018-03-27 11:41:40</p>
+								</div>
+							</div>
+							<div class="uk-grid-small uk-child-width-1-2 uk-grid basic-info-row">
+								<p>Ostatnie logowanie</p>
+								<div class="bold-text">
+									<p>2018-03-27 11:41:40</p>
+								</div>
+							</div>
+							<div class="uk-grid-small uk-child-width-1-2 uk-grid basic-info-row">
+								<p>Dodatkowy adres e-mail</p>
+								<p><a href="" class="uk-icon-button" uk-icon="file-edit" uk-toggle="target: #modal-example-email"></a></p>
+								<!-- Dodatkowy adres e-mail popup -->
+								<div id="modal-example-email" uk-modal>
+									<div class="uk-modal-dialog uk-modal-body">
+										<h2 class="uk-modal-title">Lista dodatkowych adresów e-mail</h2>
+										<form class="uk-form-horizontal">
+											<div class="uk-margin">
+												<label class="uk-form-label" for="form-horizontal-text">Adres e-mail</label>
+												<div class="uk-form-controls">
+													<input class="uk-input" id="form-horizontal-text-email" type="email">
+												</div>
+											</div>
+										</form>
+										<p class="uk-text-right">
+											<button class="uk-button uk-button-default uk-modal-close" type="button">WRÓĆ</button>
+											<button class="uk-button uk-button-primary  uk-modal-close" type="button">ZAPISZ</button>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="uk-margin uk-grid-small uk-child-width-1-2 uk-grid basic-info-row">
+								<p>Dodatkowy telefon kontaktowy</p>
+								<p> <a href="" class="uk-icon-button" uk-icon="file-edit" uk-toggle="target: #modal-example"></a></p>
+								<!-- Dodatkowy telefon kontaktowy popup -->
+								<div id="modal-example" uk-modal>
+									<div class="uk-modal-dialog uk-modal-body">
+										<h2 class="uk-modal-title">Lista dodatkowych telefonów użytkownika</h2>
+										<form class="uk-form-horizontal">
+											<div class="uk-margin">
+												<label class="uk-form-label" for="form-horizontal-text">Telefon kontaktowy</label>
+												<div class="uk-form-controls">
+													<input class="uk-input" id="form-horizontal-text" type="tel">
+												</div>
+											</div>
+										</form>
+										<p class="uk-text-right">
+											<button class="uk-button uk-button-default uk-modal-close" type="button">WRÓĆ</button>
+											<button class="uk-button uk-button-primary  uk-modal-close" type="button">ZAPISZ</button>
+										</p>
+									</div>
+								</div>
+								<!--  -->
+							</div>
+						</div>
+					</div>
+					<!--GRUPY RABATOWE  -->
+					<div class="uk-card uk-card-default uk-card-body uk-margin-top ">
+						<h3 class="uk-card-title">Grupy rabatowe</h3>
+						<label class="uk-form-label uk-width-expand@" for="form-stacked-select">Grupa rabatowa</label>
+						<div class="uk-form-controls uk-width-expand@">
+							<select class="uk-select">
+									<option>25%</option>
+									<option>20%</option>
+									<option>15%</option>
+									<option>25% + 0% rura</option>
+									<option>MAX - 10%BM</option>
+									<option>MAX + 0% rura</option>
+									<option>Expo</option>
+									<option>10% wszystko/hurtownia</option>
+									<option>15% wszystko/hurtownia</option>
+									<option>20% wszystko/hurtownia</option>
+								</select>
+						</div>
+					</div>
+					<div class="uk-card uk-card-default uk-card-body uk-margin-top">
+						<!--NADANIE ETYKIET DLA KLIENTA  -->
+						<h3 class="uk-card-title">Etykiety</h3>
+						<div class="uk-column-1-1">
+							<div class="uk-margin uk-grid-small uk-child-width-1-2 uk-grid">
+								<label>Nazwa etykiety</label>
+								<label></label>
+							</div>
+						</div>
+						<div class="uk-column-1-1">
+							<div class="uk-margin uk-grid-small uk-child-width-1-2 uk-grid">
+								<label>
+									<input id="premium-badge" class="uk-checkbox" type="checkbox">
+										<span class="uk-badge uk-label-warning">PREMIUM</span>
+								</label>
+								<span id="premium-visibility" class="eye-icon-container disabled-icon">
+  									<i id="premium-badge-visible" class="fa fa-eye"></i>
+										<i id="premium-badge-invisible" class="fa fa-eye-slash hidden" aria-hidden="true"></i>
+               	</span>
+							</div>
+						</div>
+						<div class="uk-column-1-1">
+							<div class="uk-margin uk-grid-small uk-child-width-1-2 uk-grid">
+								<label>
+									<input id="risky-badge" class="uk-checkbox" type="checkbox">
+									<span class="uk-badge uk-label-danger">RYZYKOWNY
+									</span>
+								</label>
+								<span id="risky-visibility" class="eye-icon-container disabled-icon">
+  									<i id="risky-badge-visible" class="fa fa-eye"></i>
+										<i id="risky-badge-invisible" class="fa fa-eye-slash hidden" aria-hidden="true"></i>
+               	</span>
+							</div>
+						</div>
+						<div class="uk-column-1-1">
+							<div class="uk-margin uk-grid-small uk-child-width-1-2 uk-grid">
+								<label>
+									<input id="fitter-badge" class="uk-checkbox" type="checkbox">
+									<span class="uk-badge">INSTALATOR
+									</span>
+								</label>
+								<span id="fitter-visibility" class="eye-icon-container disabled-icon">
+  									<i id="fitter-badge-visible" class="fa fa-eye"></i>
+										<i id="fitter-badge-invisible" class="fa fa-eye-slash hidden" aria-hidden="true"></i>
+               	</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-card uk-card-default uk-card-body uk-width-expand@m">
+					<!--EDYCJA GŁÓWNYCH DANYCH KLIENTA  -->
+					<h3 class="uk-card-title">Edycja danych</h3>
+					<form class="uk-form-stacked" name="editofbasicinfo">
+						<div class="uk-margin">
+							<div class="uk-column-1-2">
+								<label class="uk-form-label uk-width-expand@" for="typ-klienta">Typ klienta</label>
+								<div class="uk-form-controls uk-width-expand@">
+									<select name="typ-klienta" class="uk-select" id="type-of-client">
+										<option value="private">Osoba prywanta</option>
+										<option value="company">Firma</option>
+									</select>
+								</div>
+								<label class="uk-form-label uk-width-expand@" for="status-klienta">Status klienta</label>
+								<div class="uk-form-controls uk-width-expand@">
+									<select name="status-klienta" class="uk-select">
+										<option>Nowy</option>
+										<option>Potwierdzony</option>
+										<option>Zbanowany</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-stacked-text">Adres e-mail</label>
+							<div class="uk-form-controls">
+								<input class="uk-input" id="form-email" type="email" required>
+							</div>
+						</div>
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-stacked-text">Hasło</label>
+							<div class="uk-form-controls">
+								<input class="uk-input" type="password">
+							</div>
+						</div>
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-stacked-text">Nazwa firmy</label>
+							<div class="uk-form-controls">
+								<input class="uk-input" id="form-company-name" type="text" required>
+							</div>
+						</div>
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-stacked-text" id="form-nip-nr">NIP</label>
+							<div class="uk-form-controls">
+								<input class="uk-input" type="text" name="NIP">
+							</div>
+						</div>
+						<div class="uk-margin">
+							<div class="uk-column-1-1">
+								<label class="uk-form-label uk-width-1-2">Imię</label>
+								<div class="uk-form-controls">
+									<input class="uk-input" type="text">
+								</div>
+								<div class="uk-margin">
+									<label class="uk-form-label uk-width-expand">Nazwisko</label>
+									<div class="uk-form-controls">
+										<input class="uk-input" type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-stacked-text">Telefon</label>
+							<div class="uk-form-controls">
+								<input class="uk-input" type="tel" id="form-telephone-nr" required>
+							</div>
+						</div>
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-stacked-text">Strona internetowa</label>
+							<div class="uk-form-controls">
+								<input class="uk-input" type="url" id="form-url" required>
+							</div>
+						</div>
+					</form>
+					<div class="uk-align-right">
+						<button class="uk-button uk-button-primary" id="btn-confirm-data">Zaktualizuj dane</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Sekcja w ktorej będą wyświetlane komentarze nadane klientowi  -->
+		<div class="comment-block">
+			<div uk-grid class="uk-grid">
+				<div class="uk-card uk-card-default uk-card-body uk-width-1-1">
+					<div uk-grid class="flex-containter">
+						<div class="uk-width-1-3">
+							<h3 class="uk-card-title">Komentarze</h3>
+						</div>
+						<div class="uk-width-expand">
+							<!--Forumlarz edycji adresu klienta w formie pop-upu  -->
+							<a class="uk-button uk-button-primary" href="#modal-overflow-add-comment" uk-toggle id="btn-add-comment">DODAJ KOMENTARZ</a>
+							<div id="modal-overflow-add-comment" uk-modal>
+								<div class="uk-modal-dialog">
+									<button class="uk-modal-close-default" type="button" uk-close></button>
+									<div class="uk-modal-header">
+										<h3 class="uk-modal-title">Dodaj komentarz</h3>
+									</div>
+									<div class="uk-modal-body" uk-overflow-auto>
+										<form class="uk-form-horizontal">
+											<div class="uk-margin">
+												<label class="uk-form-label" for="form-stacked-text">Nazwa użytkownika</label>
+												<div class="uk-form-controls">
+													<input class="uk-input" type="text" id="comment-user" required>
+												</div>
+											</div>
+											<div class="uk-margin">
+												<label class="uk-form-label" for="form-stacked-text">Tekst komentarza</label>
+												<div class="uk-form-controls">
+													<textarea class="uk-input" rows="5" uk-text-truncate type="text" id="comment-content"></textarea>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="uk-modal-footer uk-text-right">
+										<button class="uk-button uk-button-default uk-modal-close" type="button">WRÓĆ</button>
+										<button id="save-comment" class="uk-button uk-button-primary" type="button">ZAPISZ</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<table class="uk-table uk-table-divider uk-table-hover">
+						<thead>
+							<tr>
+								<th class="uk-table-shrink">Autor</th>
+								<th class="uk-table-shrink">Data utworzenia</th>
+								<th class="uk-table-shrink">Treść</th>
+								<th class="uk-table-shrink">Akcja</th>
+							</tr>
+						</thead>
+						<tbody id="comment-table">
+							<tr>
+								<td>Anna Kowalska</td>
+								<td>11-06-2016</td>
+								<td>Kontakt ws. skrzynek, zamówień tel.669438669 (sklep)</td>
+								<td><a href="" class="uk-icon-button btn-trash" uk-icon="trash"></a></td>
+							</tr>
+							<tr>
+								<td>Justyna Nowak</td>
+								<td>11-05-2017</td>
+								<td>Bardzo proszę by faktury były wysyłane również na adres e-mail adrian@ziterm.pl Dostawa zawsze do Skoczowa (chyba, że klient uprzedzi nas mailowo, że ma być inaczej).</td>
+								<td><a href="" class="uk-icon-button btn-trash" uk-icon="trash"></a></td>
+							</tr>
+							<tr>
+								<td>Mirosław Jóźnik</td>
+								<td>10-04-2018</td>
+								<td>Bardzo proszę by faktury przesyłać również na: adrian@ziterm.pl oraz pawel@ziterm.pl</td>
+								<td><a href="" class="uk-icon-button btn-trash" uk-icon="trash"></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--Sekcja dodatkowych adresów klienta  -->
+		<div class="adress-block">
+			<div uk-grid class="uk-grid">
+				<div class="uk-card uk-card-default uk-card-body uk-width-1-1">
+					<div uk-grid class="flex-containter">
+						<div class="uk-width-1-3">
+							<h3 class="uk-card-title">Adresy</h3>
+						</div>
+						<div class="uk-width-expand">
+							<!--Forumlarz dodania adresu klienta w formie pop-upu  -->
+							<a class="uk-button uk-button-primary" href="#modal-overflow" uk-toggle>DODAJ ADRES</a>
+							<div id="modal-overflow" uk-modal>
+								<div class="uk-modal-dialog">
+									<button class="uk-modal-close-default" type="button" uk-close></button>
+									<div class="uk-modal-header">
+										<h3 class="uk-modal-title">Dodaj adres</h3>
+									</div>
+									<div class="uk-modal-body" uk-overflow-auto>
+										<form class="uk-form-stacked">
+											<div class="uk-margin">
+												<label class="uk-form-label" for="form-stacked-text">Nazwa adresu</label>
+												<div class="uk-form-controls">
+													<input class="uk-input" type="text" required>
+												</div>
+											</div>
+											<div uk-grid>
+												<div clas="uk-margin">
+													<div class="uk-column-1-3">
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Imię</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text">
+														</div>
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Nazwisko</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text">
+														</div>
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Firma</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div uk-grid>
+												<div class="uk-margin">
+													<div class="uk-column-1-2">
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Telefon</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="tel">
+														</div>
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">NIP</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text" name="NIP">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div uk-grid>
+												<div class="uk-margin">
+													<div class="uk-column-1-3">
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Ulica</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text">
+														</div>
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Kod pocztowy</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text" name="post-code">
+														</div>
+														<label class="uk-form-label" uk-width-auto for="form-stacked-text">Miasto</label>
+														<div class="uk-form-controls uk-width-1-1">
+															<input class="uk-input" type="text">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="uk-modal-footer uk-text-right">
+										<button class="uk-button uk-button-default uk-modal-close" type="button">WRÓĆ</button>
+										<button class="uk-button uk-button-primary" type="button">ZAPISZ</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="uk-table uk-table-divider uk-table-hover">
+						<thead>
+							<tr>
+								<th class="uk-table-shrink">ID</th>
+								<th class="uk-table-shrink">Alias</th>
+								<th class="uk-table-shrink">Telefon</th>
+								<th class="uk-table-shrink">Ulica</th>
+								<th class="uk-table-shrink">Miasto</th>
+								<th class="uk-table-shrink">Kod pocztowy</th>
+								<th class="uk-table-shrink">Domyślny dostawy</th>
+								<th class="uk-table-shrink">Domyślny faktury</th>
+								<th class="uk-table-shrink"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>345</td>
+								<td>
+									<div id="adress-alias">Faktura</div>
+								</td>
+								<td id="adress-telephone">663783830</td>
+								<td id="ardess-street">Szpotawicka 11</td>
+								<td id="adress-city">Górki Wielkie</td>
+								<td id="adress-post">43-436</td>
+								<td>
+									<div id="default-delivery">
+										<a class="uk-icon-button btn-green white-icon" uk-icon="check" id="default-delivery-check"></a><a class="uk-icon-button btn-red white-icon hidden" uk-icon="close" id="default-delivery-close"></a>
+									</div>
+								</td>
+								<td>
+									<div id="default-invoice">
+										<a class="uk-icon-button btn-green white-icon hidden" uk-icon="check" id="default-invoice-check"></a><a class="uk-icon-button btn-red white-icon" uk-icon="close" id="default-invoice-close"></a>
+									</div>
+								</td>
+								<td>
+									<!--Forumlarz edycji adresu klienta w formie pop-upu  -->
+									<a class="uk-button uk-button-default" href="#modal-overflow-edit-adress" uk-toggle id="btn-edit-adress">EDYTUJ</a>
+									<div id="modal-overflow-edit-adress" uk-modal>
+										<div class="uk-modal-dialog">
+											<button class="uk-modal-close-default" type="button" uk-close></button>
+											<div class="uk-modal-header">
+												<h3 class="uk-modal-title">Edycja adresu</h3>
+											</div>
+											<div class="uk-modal-body" uk-overflow-auto>
+												<form class="uk-form-stacked">
+													<div class="uk-margin">
+														<label class="uk-form-label" for="form-stacked-text">Nazwa adresu*</label>
+														<div class="uk-form-controls">
+															<input class="uk-input" type="text" id="edit-adress-alias">
+														</div>
+													</div>
+													<div uk-grid>
+														<div clas="uk-margin">
+															<div class="uk-column-1-3">
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Imię</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="text">
+																</div>
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Nazwisko</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="text">
+																</div>
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Firma</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="text">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div uk-grid>
+														<div class="uk-margin">
+															<div class="uk-column-1-2">
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Telefon</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="tel">
+																</div>
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">NIP</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="number">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div uk-grid>
+														<div class="uk-margin">
+															<div class="uk-column-1-3">
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Ulica</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="text">
+																</div>
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Kod pocztowy</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="number" name="post-code">
+																</div>
+																<label class="uk-form-label" uk-width-auto for="form-stacked-text">Miasto</label>
+																<div class="uk-form-controls uk-width-1-1">
+																	<input class="uk-input" type="text">
+																</div>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
+
+											<div class="uk-modal-footer uk-text-right">
+												<button class="uk-button uk-button-default uk-modal-close" type="button">WRÓĆ</button>
+												<button class="uk-button uk-button-primary" type="button">ZAPISZ</button>
+											</div>
+										</div>
+									</div>
+									<!--  -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--SEKCJA ZAMÓWIEŃ - cała historia klienta  -->
+		<div class="history-block">
+			<div uk-grid class="uk-grid">
+				<div class="uk-card uk-card-default uk-card-body uk-width-1-1">
+					<div uk-grid class="flex-containter">
+						<h3 class="uk-card-title">Historia zamówień</h3>
+					</div>
+					<table class="uk-table uk-table-divider uk-table-hover">
+						<thead>
+							<tr>
+								<th class="uk-table-shrink">Nr zamówienia</th>
+								<th class="uk-table-shrink">Wartość zamówienia netto</th>
+								<th class="uk-table-shrink">Wartość zamówienia brutto</th>
+								<th class="uk-table-shrink">Data utworzenia</th>
+								<th class="uk-table-shrink">Data edycji</th>
+								<th class="uk-table-shrink">Status</th>
+								<th class="uk-table-shrink">Faktura</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>16064</td>
+								<td>5 049,67 zł</td>
+								<td>6 211,09 zł</td>
+								<td>20-04-2013</td>
+								<td>08-01-2018</td>
+								<td><span class="uk-badge">Zapłacone</span></td>
+								<td>
+									<a href="" class="uk-icon-button" uk-icon="file-edit"></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<ul class="uk-pagination" uk-margin>
+						<li><a href="#"><span uk-pagination-previous></span></a></li>
+						<li><a href="#">1</a></li>
+						<li class="uk-disabled"><span>...</span></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li class="uk-active"><span>7</span></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+						<li class="uk-disabled"><span>...</span></li>
+						<li><a href="#">20</a></li>
+						<li><a href="#"><span uk-pagination-next></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--Przysisk pozwalający na zatwierdzenie wszystkich rubryk oraz umozliwiający powrót na górę strony  -->
+		<div class="back-to-top">
+
+			<a href="#" class="uk-icon-button uk-margin-small-right" uk-totop uk-scroll></a></div>
+		<script src="scripts/main.bundle.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+		<script src="https://use.fontawesome.com/7caf6cfffb.js"></script>
+	</div>
+
+</body>
+
+</html>
